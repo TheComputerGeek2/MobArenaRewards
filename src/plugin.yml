@@ -1,0 +1,6 @@
+name: MobArenaRewards
+version: 0.1.0
+main: me.thecomputergeek2.mobarenarewards.MobArenaRewards
+depend: [MobArena]
+description: Highly customizable rewards for MobArena.
+author: TheComputerGeek2

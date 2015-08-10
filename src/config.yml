@@ -1,0 +1,11 @@
+#contains the arenas
+arenas:
+#one of the arenas
+    default:
+#wave 1
+        '1':
+#one of the rewards possible for wave 1
+          '1':
+              item:
+                  
+#put the itemstack format within this
