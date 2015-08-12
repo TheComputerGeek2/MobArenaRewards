@@ -1,5 +1,7 @@
 package me.thecomputergeek2.mobarenarewards;
 
+import me.thecomputergeek2.mobarenarewards.cmd.CmdUtil;
+
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -11,7 +13,7 @@ public class MobArenaRewards extends JavaPlugin {
 		Bukkit.getPluginManager().registerEvents(new WaveListener(), this);
 		// TODO setup the listeners
 
-		// TODO make a command to add the item stacks
+		CmdUtil.registerCommands();
 	}
 
 	@Override

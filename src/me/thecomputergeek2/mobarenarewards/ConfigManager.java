@@ -52,7 +52,6 @@ public class ConfigManager {
 	public void setup(MobArenaRewards plugin) {
 		this.plugin = plugin;
 		this.ma = (MobArena) Bukkit.getPluginManager().getPlugin("MobArena");
-		
 		//make sure each arena has a section in the config
 		createArenaSections();
 	}
@@ -85,7 +84,6 @@ public class ConfigManager {
 		if (!isRewardForWave(a, waveNumber)) {
 			return null;
 		}
-		
 		ConfigurationSection wave = arenaSection.getConfigurationSection(waveNumber + "");
 		HashSet<ItemStack> items = new HashSet<ItemStack>();
 		for (String s: wave.getKeys(false)) {
@@ -102,7 +100,6 @@ public class ConfigManager {
 		if (arenaSection == null) {
 			return;
 		}
-		
 		ConfigurationSection waveSection = arenaSection.getConfigurationSection(waveNumber + "");
 		String newKey = getNextRewardKey(waveSection);
 		waveSection.set(newKey, stack.serialize());
@@ -120,7 +117,6 @@ public class ConfigManager {
 				
 			}
 		}
-		
 		return currentMax + "";
 	}
 	
@@ -137,6 +133,10 @@ public class ConfigManager {
 				arena.getRewardManager().addReward(p, MAUtils.getRandomReward(itemList));
 			}
 		}
+	}
+	
+	public static MobArena getMobArena() {
+		return instance.ma;
 	}
 	
 

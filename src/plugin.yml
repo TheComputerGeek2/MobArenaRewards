@@ -4,3 +4,10 @@ main: me.thecomputergeek2.mobarenarewards.MobArenaRewards
 depend: [MobArena]
 description: Highly customizable rewards for MobArena.
 author: TheComputerGeek2
+
+commands:
+
+permissions:
+    ma.rewards.addreward:
+        description: Add rewards to arenas from in game
+        default: op
